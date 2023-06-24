@@ -8,6 +8,10 @@
         Hijri Date:
            <span id="hijriDate"></span> 
         <br>
+
+        Next New Moon:
+           <span id="nextNewMoon"></span> 
+        <br>
         
     </body>
 </html>
@@ -15,8 +19,10 @@
 <script>
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const lastNewMoon = urlParams.get('lastNewMoon');
+    
     const hijriDate = urlParams.get('hijriDate');
-    document.getElementById("lastNewMoon").innerHTML = lastNewMoon;
+    const nextNewMoon = urlParams.get('nextNewMoon');
+    document.getElementById("lastNewMoon").innerHTML = urlParams.get('lastNewMoon');
     document.getElementById("hijriDate").innerHTML = hijriDate;
+    document.getElementById("nextNewMoon").innerHTML = nextNewMoon;
 </script>
