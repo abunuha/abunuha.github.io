@@ -1,8 +1,13 @@
 <html>
     <h1>Moon date app</h1>
     <body>
-        Birth Date:
-           <span id="birthdate"></span>
+        Last New Moon:
+           <span id="lastNewMoon"></span> 
+        <br>
+
+        Hijri Date:
+           <span id="hijriDate"></span> 
+        <br>
         
     </body>
 </html>
@@ -10,7 +15,8 @@
 <script>
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const birthdate = urlParams.get('birthdate');
-    const pdflink = urlParams.get('pdflink');
-    document.getElementById("birthdate").innerHTML = birthdate;
+    const lastNewMoon = urlParams.get('lastNewMoon');
+    const hijriDate = urlParams.get('hijriDate');
+    document.getElementById("lastNewMoon").innerHTML = lastNewMoon;
+    document.getElementById("hijriDate").innerHTML = hijriDate;
 </script>
