@@ -12,6 +12,14 @@
         Next New Moon:
            <span id="nextNewMoon"></span> 
         <br>
+
+        <span id="expectedDays"></span> 
+        <br>
+        
+        <span id="nextMonth"></span> 
+        <br>
+
+        
         
     </body>
 </html>
@@ -19,10 +27,10 @@
 <script>
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    
-    const hijriDate = urlParams.get('hijriDate');
-    const nextNewMoon = urlParams.get('nextNewMoon');
+
     document.getElementById("lastNewMoon").innerHTML = urlParams.get('lastNewMoon');
-    document.getElementById("hijriDate").innerHTML = hijriDate;
-    document.getElementById("nextNewMoon").innerHTML = nextNewMoon;
+    document.getElementById("hijriDate").innerHTML = urlParams.get('hijriDate');
+    document.getElementById("nextNewMoon").innerHTML = urlParams.get('nextNewMoon');
+    document.getElementById("expectedDays").innerHTML = urlParams.get('expectedDays');
+    document.getElementById("nextMonth").innerHTML = urlParams.get('nextMonth');
 </script>
